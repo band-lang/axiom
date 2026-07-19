@@ -19,7 +19,7 @@ _start:
     push ebx ; save pointer on structur multiboot
     call kernel_main ; call function from C
     cli ; disable interrupts
-    htl ; stop processor
+    hlt ; stop processor
 
 
 section .bss

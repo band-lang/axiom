@@ -6,7 +6,7 @@
 #define DEFAULT_STACK_SIZE 8192
 
 
-process_t process_table[MAX_PROCCESSES];
+static process_t process_table[MAX_PROCCESSES];
 static uint32_t next_pid = 1;
 
 

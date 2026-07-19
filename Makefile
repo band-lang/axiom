@@ -15,7 +15,11 @@ KERNEL_OBJS = boot/boot.o \
               kernel/ipc.o \
               kernel/interrupt.o \
               kernel/memory.o \
-              kernel/clock.o
+              kernel/clock.o \
+			  kernel/idt.o \
+			  kernel/pic.o \
+			  kernel/port.o \
+			  kernel/asm/interrupt.o
 
 # Default ultimate goal
 all: Axiom.iso
@@ -23,6 +27,9 @@ all: Axiom.iso
 # Asm loads
 boot/boot.o: boot/boot.asm
 	$(NASM) $(NASM_FLAGS) boot/boot.asm -o boot/boot.o
+
+kernel/asm/%.o: kernel/asm/%.asm
+	$(NASM) $(NASM_FLAGS) $< -o $@
 
 # All C-Files of kernel
 kernel/%.o: kernel/%.c
@@ -50,6 +57,11 @@ run: Axiom.iso
 
 #Debug
 debug: Axiom.iso
+	qemu-system-x86_64 -cdrom Axiom.iso -d int -no-reboot -no-shutdown
+
+
+#Debug gdb
+debug_gdb: Axiom.iso
 	qemu-system-x86_64 -cdrom Axiom.iso -s -S
 
 # Clean

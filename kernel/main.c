@@ -1,5 +1,12 @@
 #include "vga.h"
-#include "proc.h"
+#include "idt.h"
+#include "pic.h"
+#include "clock.h"
+#include "port.h"
+
+
+// Declare function from asm
+extern void timer_handler_asm(void);
 
 
 void test_process(void) {
@@ -12,11 +19,25 @@ void test_process(void) {
 
 
 void kernel_main(unsigned long magic, unsigned long addr) {
-    const char *msg = "Hello, Kernel.";
-    const char *name = "Test";
     vga_clear();
-    vga_write(msg, 0x0F, 0, 0);
-    proc_create(test_process, name);
 
+    // 1. Initialization
+    idt_init(); // Load IDT to processor
+    pic_init(); // Setting PIC (IRQ - vectors)
+
+    // 2. Full in IDT for timer
+    idt_set_gate(32, (uint32_t)timer_handler_asm, 0x8E); // IDT[32] -> time_handler
+
+    // 3. Start timer
+    pit_init(100);
+
+    // Unmask IRQ 0
+    outb(0x21, 0xFE);
+    outb(0xA1, 0xFE);
+
+    // 5. Allow interrupts
+    asm volatile("sti");
+
+    // 6. Wating for interrupts
     while(1);
 }
