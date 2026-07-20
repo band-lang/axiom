@@ -15,8 +15,8 @@ section .text
 
 _start:
     ; Save magic and multiboot_info from GRUB
-    mov esi, eax
-    mov edi, ebx
+    mov edi, eax ; Magic integer
+    mov esi, ebx ; Multiboot info
 
     ; Check for support CPUID
     pushfd ; read eflags from processor and push values in stack
@@ -98,15 +98,12 @@ long_mode_start:
     ; Setting stack
     mov rsp, stack_top
 
-    ; Setting vars for arguments of func kernel_main
-    mov eax, edi      ; eax = multiboot_info (template)
-    mov edi, esi      ; rdi = magic (first argument)
-    mov esi, eax      ; rsi = multiboot_info (second argument)
-
-    push rdi
-    push rsi
-
-    call kernel_main ; Call kernel_main function
+    ; Calls kernel_main from C
+    call kernel_main
+    ; Arguments are passed in registers rdi and rsi per System V ABI
+    ; rdi and rsi hold values saved from GRUB: magic integer and multiboot info
+    ; By Intel convention, first 6 arguments are passed via registers
+    ; rdi = magic (1st argument), rsi = multiboot_info (2nd argument)
 
     cli ; Stop interrupts
     htl ; Stop processor
@@ -142,3 +139,4 @@ section .bss
     stack_bottom:
         resb 16384 ; reserving 16 KB for stack
     stack_top:
+        resb 4096
