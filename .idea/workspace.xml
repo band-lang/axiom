@@ -24,36 +24,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09bbdb86-a22c-4b20-8519-854644ecd4a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot/boot.asm" beforeDir="false" afterPath="$PROJECT_DIR$/boot/boot.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/architecture.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/types.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/types.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/asm/interrupt.asm" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/asm/interrupt.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/clock.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/clock.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/clock.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/clock.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/idt.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/idt.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/idt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/interrupt.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/interrupt.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/ipc.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/ipc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/kernel.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/kernel.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/memory.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/memory.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/memory.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/memory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/pic.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/pic.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/pic.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/pic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/port.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/port.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/port.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/port.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/proc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/proc.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/proc.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/proc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/vga.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/vga.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/vga.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/kernel/vga.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linker.ld" beforeDir="false" afterPath="$PROJECT_DIR$/linker.ld" afterDir="false" />
-    </list>
+    <list default="true" id="09bbdb86-a22c-4b20-8519-854644ecd4a8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -112,61 +83,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000014927506" />
-      <entry key="MS500" value="1.0507902242988376" />
-      <entry key="S2" value="3.342697317983517" />
-      <entry key="S5" value="6.76800820711137" />
-      <entry key="S10" value="8.92605871065168" />
-      <entry key="S30" value="10.850368274091048" />
-      <entry key="S60" value="11.414459669370862" />
-      <entry key="M2" value="12.004572560483485" />
-      <entry key="M5" value="16.228028260418483" />
-      <entry key="M10" value="28.40207984482958" />
-      <entry key="M15" value="44.13950167402965" />
-      <entry key="M30" value="103.66030773574536" />
-      <entry key="H1" value="242.730406007959" />
-      <entry key="H2" value="463.88860640765574" />
-      <entry key="H4" value="702.400982102305" />
-      <entry key="D1" value="1064.4455241405676" />
-      <entry key="W1" value="1152.3562213853477" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000038927" />
+      <entry key="S10" value="1.0000067970614444" />
+      <entry key="S30" value="1.1000912914864167" />
+      <entry key="S60" value="2.315090513499915" />
+      <entry key="M2" value="9.025890940017026" />
+      <entry key="M5" value="38.23854818362394" />
+      <entry key="M10" value="72.5746567158725" />
+      <entry key="M15" value="97.4624096665876" />
+      <entry key="M30" value="164.06115968791676" />
+      <entry key="H1" value="303.38555514157736" />
+      <entry key="H2" value="529.7018341309486" />
+      <entry key="H4" value="780.520916136462" />
+      <entry key="D1" value="1169.4489948154492" />
+      <entry key="W1" value="1264.9657341988443" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="2.5277840876711827E-266" />
-      <entry key="S5" value="5.768939577156751E-107" />
-      <entry key="S10" value="7.59535356461886E-54" />
-      <entry key="S30" value="1.9657353976562733E-18" />
-      <entry key="S60" value="1.408539937420061E-9" />
-      <entry key="M2" value="4.029797615061685E-5" />
-      <entry key="M5" value="0.02526442851869729" />
-      <entry key="M10" value="0.25654772209358223" />
-      <entry key="M15" value="0.5727156812985276" />
-      <entry key="M30" value="1.317504375579675" />
-      <entry key="H1" value="2.3353680261012544" />
-      <entry key="H2" value="4.451157381056594" />
-      <entry key="H4" value="7.977173349129778" />
-      <entry key="D1" value="15.476137052812648" />
-      <entry key="W1" value="17.609485585895506" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="2.562215544046333E-167" />
+      <entry key="S10" value="5.061833209467081E-84" />
+      <entry key="S30" value="1.7170317931177025E-28" />
+      <entry key="S60" value="1.316424040167811E-14" />
+      <entry key="M2" value="1.2319598525271565E-7" />
+      <entry key="M5" value="0.0024924979328405116" />
+      <entry key="M10" value="0.08058066122921677" />
+      <entry key="M15" value="0.26463514302856517" />
+      <entry key="M30" value="0.8955839204449481" />
+      <entry key="H1" value="1.925450865450952" />
+      <entry key="H2" value="4.0416760922800234" />
+      <entry key="H4" value="7.601395113004754" />
+      <entry key="D1" value="15.352176215546738" />
+      <entry key="W1" value="17.589266279469157" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.574442043148572E-4" />
-      <entry key="MS500" value="0.25454518982944563" />
-      <entry key="S2" value="3.0057835766459498" />
-      <entry key="S5" value="6.612046290313888" />
-      <entry key="S10" value="8.843477947976655" />
-      <entry key="S30" value="10.821667770607963" />
-      <entry key="S60" value="11.399948416704394" />
-      <entry key="M2" value="11.997204638429121" />
-      <entry key="M5" value="16.24916316804552" />
-      <entry key="M10" value="28.6528472766326" />
-      <entry key="M15" value="44.70488526052529" />
-      <entry key="M30" value="104.96970926193958" />
-      <entry key="H1" value="245.05872415206173" />
-      <entry key="H2" value="468.33386721221876" />
-      <entry key="H4" value="710.3735980496187" />
-      <entry key="D1" value="1079.920396722828" />
-      <entry key="W1" value="1169.9655068181671" />
+      <entry key="MS100" value="0.8293195458144417" />
+      <entry key="MS500" value="0.963261894020148" />
+      <entry key="S2" value="0.9906861581012825" />
+      <entry key="S5" value="0.996264001502078" />
+      <entry key="S10" value="0.9981370435261917" />
+      <entry key="S30" value="1.0994341295396202" />
+      <entry key="S60" value="2.314168610706219" />
+      <entry key="M2" value="9.021340407651406" />
+      <entry key="M5" value="38.23077146326937" />
+      <entry key="M10" value="72.64459878835274" />
+      <entry key="M15" value="97.71650739854171" />
+      <entry key="M30" value="164.94688832687152" />
+      <entry key="H1" value="305.30279605083206" />
+      <entry key="H2" value="533.7368970706066" />
+      <entry key="H4" value="788.1173233788433" />
+      <entry key="D1" value="1184.7998069410096" />
+      <entry key="W1" value="1282.5547848217452" />
     </decayedShown>
   </component>
   <component name="ProjectApplicationVersion">
