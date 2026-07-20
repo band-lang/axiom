@@ -1,18 +1,18 @@
-#include "proc.h"
-#include "memory.h"
+#include "../include/kernel/proc.h"
+#include "../include/kernel/memory.h"
 
 
-#define MAX_PROCCESSES 256
+#define MAX_PROCESSES 256
 #define DEFAULT_STACK_SIZE 8192
 
 
-static process_t process_table[MAX_PROCCESSES];
+static process_t process_table[MAX_PROCESSES];
 static uint32_t next_pid = 1;
 
 
-int proc_create(void(*entry)(), const char* name) {
+uint32_t proc_create(void(*entry)(), const char* name) {
     int slot = -1;
-    for (int i = 0; i < MAX_PROCCESSES; i++) {
+    for (int i = 0; i < MAX_PROCESSES; i++) {
         if (process_table[i].pid == 0) {
             slot = i;
             break;
@@ -26,9 +26,9 @@ int proc_create(void(*entry)(), const char* name) {
 
     proc->pid = next_pid;
     proc->state = PROC_READY;
-    proc->eip = (uint32_t)entry;
-    proc->esp = (uint32_t)(stack_memory + DEFAULT_STACK_SIZE);
-    proc->stack = (uint32_t)stack_memory;
+    proc->eip = (uintptr_t)entry;
+    proc->esp = (uintptr_t)(stack_memory + DEFAULT_STACK_SIZE);
+    proc->stack = (uintptr_t)stack_memory;
     proc->cr3 = (uint32_t)0; // dummy
 
     int i = 0;

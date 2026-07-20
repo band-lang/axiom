@@ -1,4 +1,4 @@
-#include "vga.h"
+#include "../include/kernel/vga.h"
 
 
 void vga_clear() {
@@ -11,19 +11,19 @@ void vga_clear() {
 }
 
 
-void vga_putchar(char symbol, uint8_t color, size_t x, size_t y) {
-    size_t col = x;
-    size_t row = y;
+void vga_putchar(const char symbol, const uint8_t color, const size_t x, const size_t y) {
+    const size_t col = x;
+    const size_t row = y;
     
     char *video = (char*)0xB8000;
-    size_t index = (row * 80 + col) * 2;
+    const size_t index = (row * 80 + col) * 2;
 
     video[index] = symbol; // Symbol
-    video[index + 1] = color; // Attribute of color for symbol
+    video[index + 1] = (char)color; // Attribute of color for symbol
 }
 
 
-void vga_write(const char *msg, uint8_t color, size_t x, size_t y) {
+void vga_write(const char *msg, const uint8_t color, const size_t x, const size_t y) {
     size_t col = x;
     size_t row = y;
 

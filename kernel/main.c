@@ -1,15 +1,16 @@
-#include "vga.h"
-#include "idt.h"
-#include "pic.h"
-#include "clock.h"
-#include "port.h"
+#include "../include/kernel/vga.h"
+#include "../include/kernel/idt.h"
+#include "../include/kernel/pic.h"
+#include "../include/kernel/clock.h"
+#include "../include/kernel/port.h"
 
 
 // Declare function from asm
 extern void timer_handler_asm(void);
 
 
-void test_process(void) {
+// Garbage
+static void test_process(void) {
     const char *msg = "Hello from test process";
     vga_clear();
     vga_write(msg, 0x0F, 0, 0);
@@ -18,7 +19,14 @@ void test_process(void) {
 }
 
 
-void kernel_main(unsigned long magic, unsigned long addr) {
+void kernel_main(unsigned long magic, unsigned long multiboot_info) {
+    if (magic != 0x2BADB002) {
+        vga_clear();
+        char *error_msg = "Error: not loaded by Multiboot-compliant bootloader!";
+        vga_write(error_msg, 0x0C, 9, 12);
+        while(1);
+    }
+
     vga_clear();
 
     // 1. Initialization
@@ -26,7 +34,7 @@ void kernel_main(unsigned long magic, unsigned long addr) {
     pic_init(); // Setting PIC (IRQ - vectors)
 
     // 2. Full in IDT for timer
-    idt_set_gate(32, (uint32_t)timer_handler_asm, 0x8E); // IDT[32] -> time_handler
+    idt_set_gate(32, (uintptr_t)timer_handler_asm, 0x8E); // IDT[32] -> time_handler
 
     // 3. Start timer
     pit_init(100);

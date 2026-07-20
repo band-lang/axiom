@@ -1,6 +1,6 @@
 # Axiom
 
-Axiom is a small x86 (32-bit) kernel written from scratch as a learning project. It boots via GRUB/Multiboot, sets up interrupts, and runs a cooperative-ish scheduler with a handful of processes printing to the VGA text buffer.
+Axiom is a small x86_64 (64-bit) kernel written from scratch as a learning project. It boots via GRUB/Multiboot, sets up interrupts, and runs a cooperative-ish scheduler with a handful of processes printing to the VGA text buffer.
 
 This is **not** a production OS — it's a personal project for learning how kernels, interrupts, memory, and processes actually work under the hood.
 
@@ -44,8 +44,8 @@ Axiom/
 Building and running Axiom requires a 32-bit-capable cross toolchain and an emulator:
 
 - `nasm` — assembler for the boot code and interrupt stubs
-- `gcc` with 32-bit support (`-m32`, needs `gcc-multilib` on most distros)
-- `ld` with 32-bit ELF support (`binutils`)
+- `gcc` with 64-bit support (`-m64`, needs `gcc-multilib` on most distros)
+- `ld` with 64-bit ELF support (`binutils`)
 - `grub-mkrescue` (from `grub-pc-bin` / `grub2-common`, plus `xorriso`)
 - `qemu-system-x86_64` to run the resulting ISO
 

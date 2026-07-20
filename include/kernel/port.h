@@ -1,7 +1,7 @@
 #ifndef PORT_H
 #define PORT_H
 
-#include "../include/types.h"
+#include "../types.h"
 
 void outb(uint16_t port, uint8_t value);
 uint8_t inb(uint16_t port);

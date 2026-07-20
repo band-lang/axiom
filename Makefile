@@ -3,9 +3,9 @@ NASM = nasm
 GCC = gcc
 LD = ld
 
-NASM_FLAGS = -f elf32
-GCC_FLAGS = -m32 -c -ffreestanding -nostdlib -Iinclude -Ikernel -g
-LD_FLAGS = -m elf_i386 -T linker.ld -nostdlib
+NASM_FLAGS = -f elf64
+GCC_FLAGS = -m64 -c -ffreestanding -nostdlib -Iinclude -Ikernel -g
+LD_FLAGS = -m elf_x86_64 -T linker.ld -nostdlib
 
 # List of object files of core
 KERNEL_OBJS = boot/boot.o \
@@ -66,4 +66,4 @@ debug_gdb: Axiom.iso
 
 # Clean
 clean:
-	rm -rf boot/*.o kernel/*.o kernel.bin Axiom.iso iso
+	rm -rf boot/*.o kernel/*.o kernel/asm/*.o kernel.bin Axiom.iso iso

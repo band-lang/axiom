@@ -1,9 +1,9 @@
 #ifndef PROC_H
 #define PROC_H
 
-#include "../include/types.h"
+#include "../types.h"
 
-int proc_create(void(*entry)(), const char *name);
+uint32_t proc_create(void(*entry)(), const char *name);
 
 typedef enum {
     PROC_RUNNING,
@@ -13,14 +13,14 @@ typedef enum {
 
 
 typedef struct {
-    int pid;
+    uint32_t pid;
     char name[32];
     process_state_t state;
-    uint32_t eip;
-    uint32_t esp;
-    uint32_t regs[8];
-    uint32_t cr3;
-    uint32_t stack;
+    uint64_t eip;
+    uint64_t esp;
+    uint64_t regs[16];
+    uint64_t cr3;
+    uint64_t stack;
 } process_t;
 
 

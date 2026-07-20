@@ -16,7 +16,7 @@
 
 ## Processes
 
-- `kernel/proc.h` defines `process_t`: a PID, name, state (`PROC_RUNNING` / `PROC_READY` / `PROC_BLOCKED`), saved registers, stack pointer, and `cr3` (page directory, for future paging support).
+- `../include/kernel/proc.h` defines `process_t`: a PID, name, state (`PROC_RUNNING` / `PROC_READY` / `PROC_BLOCKED`), saved registers, stack pointer, and `cr3` (page directory, for future paging support).
 - `kernel/proc.c` currently provides `proc_create` to register a new process entry; scheduling and context switching are not implemented yet.
 
 ## Memory
